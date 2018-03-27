@@ -1,0 +1,52 @@
+﻿<Window x:Class="画刷.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:画刷"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded">
+    <StackPanel>
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="32.787,31.807,0,0" VerticalAlignment="Top" Width="180.105" Height="48.113" Click="button_Click" >
+            <Button.Background>
+                <SolidColorBrush Color="LightBlue"></SolidColorBrush>
+            </Button.Background>
+        </Button>
+        <Rectangle Width="189.94" Height="97.898" HorizontalAlignment="Right" RadiusY="27.819" RadiusX="27.819">
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                    <GradientStop Color="Blue" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.25"/>
+                    <GradientStop Color="Red" Offset="0.5"/>
+                    <GradientStop Color="Purple" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Margin="4" Text="this text uses a gradient">
+            <TextBlock.Foreground>
+                <LinearGradientBrush>
+                    <GradientStop Color="Blue" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.25"/>
+                    <GradientStop Color="Red" Offset="0.5"/>
+                    <GradientStop Color="Purple" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <Ellipse Height="60" Stroke="Blue" Width="60">
+            <Ellipse.Fill>
+                <RadialGradientBrush GradientOrigin="0.8,0.5">
+                    <GradientStop Color="Red" Offset="0"/>
+                    <GradientStop Color="Purple" Offset="1"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Rectangle Height="40" Width="100">
+            <Rectangle.Fill >
+                <VisualBrush Visual="{Binding ElementName=button}"></VisualBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <StackPanel.Background>
+            <ImageBrush ImageSource="317808.jpg" Viewbox="0,0,0.5,0.6" TileMode="Tile" ViewportUnits="Absolute" ></ImageBrush>
+        </StackPanel.Background>
+    </StackPanel>
+</Window>

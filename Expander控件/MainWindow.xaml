@@ -1,0 +1,26 @@
+﻿<Window x:Class="Expander控件.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Expander控件"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <StackPanel  Margin="3"  >
+              <Expander x:Name="expander" Header="Expander"  Margin="3" Padding="5" >
+            <Grid >
+                <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="240.778,48.208,0,0" VerticalAlignment="Top" Width="75"/>
+            </Grid>
+        </Expander>
+            <Expander x:Name="expander1" Header="Expander1"  Margin="3" Padding="5" ExpandDirection="Up">
+                <ScrollViewer  Height="100" Margin="3">
+                        <TextBlock Name="tb1" TextWrapping="Wrap" >是是收拾收拾收拾437434534收拾收拾收拾收拾收拾收收拾收拾是是是收拾收拾收拾收拾收拾收拾收拾收拾收拾收拾收拾收拾收拾收拾收拾收拾收拾收拾收拾收拾收拾收拾收拾收拾收拾收</TextBlock>
+                </ScrollViewer>
+            </Expander>
+        </StackPanel>
+      
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,26 @@
+﻿<Window x:Class="Grid面板.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Grid面板"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid ShowGridLines="False" >
+        <Grid.RowDefinitions>
+            <RowDefinition>
+            </RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="*" MinWidth="50"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="2*" MinWidth="50"></ColumnDefinition>
+            <ColumnDefinition Width="3*" ></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="button" Content="左上" Grid.Row="0" Grid.Column="2" Margin="3" Click="button_Click"/>
+        <Button x:Name="button1" Content="左上1" Grid.Row="0" Grid.Column="0" Margin="3" Grid.RowSpan="2" MouseUp="button1_MouseUp"/>
+        <Button x:Name="button2" Content="下" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3" Margin="3"/>
+        <GridSplitter x:Name="gridSplitter" Width="3" Grid.RowSpan="2" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Center" />
+    </Grid>
+</Window>

@@ -1,0 +1,11 @@
+﻿<Application x:Class="Application任务.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Application任务"
+             StartupUri="Window1.xaml" >
+    <!--Startup="Application_Startup"-->
+    <!--StartupUri="MainWindow.xaml"-->
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

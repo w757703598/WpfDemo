@@ -1,0 +1,21 @@
+﻿<Window x:Class="EventSetter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EventSetter"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <Style x:Key="MouseOverHogjtLight">
+            <Setter Property="TextBlock.Padding" Value="5"></Setter>
+            <EventSetter Event="FrameworkElement.MouseEnter" Handler="element_MouseEnter"></EventSetter>
+            <EventSetter Event="FrameworkElement.MouseLeave" Handler="element_MouseLeave"></EventSetter>
+        </Style>
+    </Window.Resources>
+    <StackPanel>
+        <TextBlock Style="{StaticResource MouseOverHogjtLight}">hover over me</TextBlock>
+        <TextBlock>sssssssss</TextBlock>
+        <TextBlock Style="{StaticResource MouseOverHogjtLight}">fsafafaf</TextBlock>
+    </StackPanel>
+</Window>

@@ -1,0 +1,42 @@
+﻿<Window x:Class="内容控件.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:内容控件"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <StackPanel  >
+            <Button x:Name="button1" Content="Button" HorizontalContentAlignment="Left" HorizontalAlignment="Left"/>
+            <Button ToolTip="This is my tool tip;you can esc" x:Name="button2" IsCancel="True" IsDefault="True" Height="30" HorizontalContentAlignment="Left" Click="button2_Click">
+                <Image Source="/1076358.png" Height="20"></Image>
+            </Button>
+            <Button x:Name="button3"  >
+                <Button.ToolTip>
+                    <ToolTip Background="AliceBlue" Placement="Absolute" HorizontalOffset="50" VerticalOffset="50">
+                        <StackPanel>
+                        <TextBlock>Image and text</TextBlock>
+                        <Image Source="/1076358.png"></Image>
+                    </StackPanel>
+                    </ToolTip>
+                </Button.ToolTip>
+                <StackPanel >
+                    <TextBlock >Image and text button</TextBlock>
+                    <Image Source="/1076358.png" Height="20"></Image>
+                    <TextBlock  >Courtesy of the StackPanel</TextBlock>
+                    <RadioButton x:Name="radioButton1" Content="RadioButton" GroupName="rdo" />
+                </StackPanel>
+            </Button>
+            <Label x:Name="label"  Target="{Binding ElementName=textBox}">Choose _A</Label>
+            <TextBox x:Name="textBox" Height="23" TextWrapping="Wrap" Text="TextBox" Margin="3"/>
+            <CheckBox x:Name="checkBox1" Content="CheckBox" IsChecked="{x:Null}" IsThreeState="True"/>
+            <CheckBox x:Name="checkBox2" Content="CheckBox"/>
+            <RadioButton x:Name="radioButton" Content="RadioButton" IsChecked="True"  />
+            <Popup IsOpen="True"/>
+
+        </StackPanel>
+       
+
+    </Grid>
+</Window>

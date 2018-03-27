@@ -1,0 +1,6 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:ResourceLibrary">
+    <ImageBrush  x:Key="TitleBrush1" TileMode="Tile"  ViewportUnits="Absolute" Viewport="0 0 23 23" ImageSource="1686.png" Opacity="0.3"></ImageBrush>
+    <ImageBrush  x:Key="TitleBrush2" TileMode="Tile" ViewportUnits="Absolute" Viewport="0 0 23 23" ImageSource="1076357.png" Opacity="0.3"></ImageBrush>
+</ResourceDictionary>
