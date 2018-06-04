@@ -33,5 +33,7 @@ namespace 画刷
         {
             button.Content = "i'm changed";
         }
+
+
     }
 }

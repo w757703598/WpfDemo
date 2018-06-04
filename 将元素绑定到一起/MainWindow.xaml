@@ -14,7 +14,7 @@
         <StackPanel Margin="5" Grid.RowSpan="2" >
             <Slider Name="slider1" Margin="3" Minimum="1" Maximum="40" Value="10" TickPlacement="TopLeft" TickFrequency="1" IsSnapToTickEnabled="True"></Slider>
             <!--<TextBlock Margin="10" Name="textblock1" Background="AliceBlue" FontSize="{Binding ElementName=slider1,Path=Value ,Mode=TwoWay}">Simple text</TextBlock>-->
-            <TextBlock Margin="10" Name="textblock1" Background="AliceBlue"  Foreground="{Binding ElementName=listBox ,Path=SelectedItem.Tag}">Simple text</TextBlock>
+            <TextBlock Margin="10" Name="textblock1" Background="AliceBlue"  Foreground="{Binding ElementName=listBox ,Path=SelectedItem}">Simple text</TextBlock>
             <Button x:Name="button" Content="Button" Margin="5" Click="button_Click"/>
             <Button x:Name="button1" Margin="5" Content="删除绑定" Click="button1_Click"/>
             <ListBox x:Name="listBox" Margin="5" Height="100">

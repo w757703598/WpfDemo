@@ -9,10 +9,11 @@
 
     <DockPanel LastChildFill="True">
         <Button x:Name="button4" Content="Button" DockPanel.Dock="Top"/>
+        <Button x:Name="button5" Content="Button" DockPanel.Dock="Top"/>
         <Button x:Name="button" Content="Button"  DockPanel.Dock="Bottom"/>
         <Button x:Name="button1" Content="Button" DockPanel.Dock="Left"/>
         <Button x:Name="button3" Content="Button" DockPanel.Dock="Right"/>
 
-        <Button x:Name="button2" Content="Button"/>
+        <Button x:Name="button2" Content="Button1"/>
     </DockPanel>
 </Window>

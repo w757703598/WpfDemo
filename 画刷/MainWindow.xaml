@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded">
     <StackPanel>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="32.787,31.807,0,0" VerticalAlignment="Top" Width="180.105" Height="48.113" Click="button_Click" >
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="32.787,31.807,0,0" VerticalAlignment="Top" Width="182.116" Height="49.119" Click="button_Click" >
             <Button.Background>
                 <SolidColorBrush Color="LightBlue"></SolidColorBrush>
             </Button.Background>

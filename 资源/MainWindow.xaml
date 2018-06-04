@@ -4,16 +4,27 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:资源"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="{x:Static local:MainWindow.WindowTitle}" Height="350" Width="525">
     <Window.Resources>
         <ImageBrush x:Key="TileBrush" TileMode="Tile" ViewportUnits="Absolute" Viewport="0 0 32 32" ImageSource="image/TULIPSHOL2.JPG"></ImageBrush>
+        <sys:String x:Key="myString">Hello</sys:String>
     </Window.Resources>
-    <Grid>
+    <Grid Background="LightBlue">
         <StackPanel Name="stackpanel1" Margin="3" >
+            <ListBox Margin="5" >
+                <ListBox.ItemsSource>
+                    <x:Array Type="sys:String">
+                        <sys:String>Tim</sys:String>
+                        <sys:String>Tom</sys:String>
+                        <sys:String>Jasper</sys:String>
+                    </x:Array>
+                </ListBox.ItemsSource>
+            </ListBox>
             <Button Content="A Tiled Button" Margin="3" Name="btn1" FontSize="14" Padding="5" Background="{StaticResource ResourceKey=TileBrush}">
             </Button>
-            <Button Content="Button2" Margin="3" Name="btn2" FontSize="14" Padding="5"></Button>
+            <Button Content="Button2" Margin="3" Name="btn2" FontSize="14" Padding="5" Click="btn2_Click"></Button>
             <Button Content="Button3" Margin="3" Name="btn3" FontSize="14" Padding="5" >
                 <Button.Resources>
                     <ImageBrush x:Key="TileBrush" TileMode="Tile" ViewportUnits="Absolute" Viewport="0 0 60 60" ImageSource="image/TULIPSHOL2.JPG"></ImageBrush>
@@ -21,7 +32,9 @@
                 <Button.Background>
                     <StaticResource ResourceKey="TileBrush"></StaticResource>
                 </Button.Background>
+            
             </Button>
+            <TextBlock Name="tbStr"></TextBlock>
         </StackPanel>
 
     </Grid>

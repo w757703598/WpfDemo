@@ -19,9 +19,16 @@ namespace 资源
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static string WindowTitle = "山高水长";
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btn2_Click( object sender, RoutedEventArgs e )
+        {
+            string str = this.FindResource("myString") as string;
+            this.tbStr.Text = str;
         }
     }
 }

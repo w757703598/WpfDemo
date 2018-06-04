@@ -1,0 +1,26 @@
+﻿<Window x:Class="使用集合对象作为列表控件的ItemSource.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:使用集合对象作为列表控件的ItemSource"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel x:Name="stackPanel" Background="LightBlue">
+        <TextBlock Text="StudentId" FontWeight="Bold" Margin="5"></TextBlock>
+        <TextBox x:Name="tbId" Margin="5"/>
+        <TextBlock Text="StudentList:" FontWeight="Bold" Margin="5"/>
+        <ListBox x:Name="listBoxStudent" Height="110" Margin="5">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Path=Id}" Width="30"/>
+                        <TextBlock Text="{Binding Path=Name}" Width="60"/>
+                        <TextBlock Text="{Binding Path=Age}" Width="30"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+    </StackPanel>
+</Window>

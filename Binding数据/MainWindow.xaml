@@ -1,0 +1,25 @@
+﻿<Window x:Class="Binding数据.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Binding数据"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel>
+        <StackPanel.DataContext>
+            <local:Student Id="6" Age="26" Name="Tim"/>
+        </StackPanel.DataContext>
+        <Grid>
+            <StackPanel>
+                <TextBox Text="{Binding Path=Id}" Margin="5"/>
+                <TextBox Text="{Binding Path=Name}" Margin="5"/>
+                <TextBox Text="{Binding Path=Age}" Margin="5"/>
+            </StackPanel>
+        </Grid>
+        <TextBox x:Name="tbName" BorderBrush="Black" Margin="5"></TextBox>
+        <Button Content="Add Age" Margin="5" Click="Button_Click"></Button>
+        <TextBlock x:Name="tbNameIndex" Text="{Binding Path=Text.[3],ElementName=tbName,Mode=OneWay}" />
+        <TextBlock x:Name="tbNameLength" Text="{Binding Path=Text.Length,ElementName=tbName,Mode=OneWay}" />
+    </StackPanel>
+</Window>
