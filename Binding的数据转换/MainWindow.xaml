@@ -6,7 +6,23 @@
         xmlns:local="clr-namespace:Binding的数据转换"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+    <Window.Resources>
+        <local:CategoryToSourceConverter x:Key="cts"/>
+        <local:StateToNullableBoolConverter x:Key="stnb"/>
+    </Window.Resources>
+    <StackPanel Background="LightBlue">
+        <ListBox x:Name="listBoxPlane" Height="160" Margin="5">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="20" Height="20" Source="{Binding Path=Category,Converter={StaticResource cts}}"/>
+                        <TextBox Text="{Binding Path=Name}" Width="60" Margin="80,0"/>
+                        <CheckBox IsThreeState="True" IsChecked="{Binding Path=State ,Converter={StaticResource stnb}}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button x:Name="btnLoad" Content="Load" Height="25" Margin="5" Click="btnLoad_Click"/>
+        <Button x:Name="btnSave" Content="Save" Height="25" Margin="5,5" Click="btnSave_Click"/>
+    </StackPanel>
 </Window>

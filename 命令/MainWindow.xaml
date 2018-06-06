@@ -1,0 +1,23 @@
+﻿<Window x:Class="命令.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:命令"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel x:Name="stackpanel1">
+        <Button x:Name="btn1" Content="sendCommand" Margin="5"/>
+        <Button Content="NewTeacher" Command="New" CommandParameter="Teacher"></Button>
+        <Button Content="NewStudent" Command="New" CommandParameter="Student"></Button>
+        <TextBox x:Name="tb1" Margin="5" Height="100"/>
+        <ListBox x:Name="lsitbox1"></ListBox>
+    </StackPanel>
+    <!--为窗体添加commandbinding-->
+    <Window.CommandBindings>
+        <CommandBinding Command="New" CanExecute="CommandBinding_CanExecute" Executed="CommandBinding_Executed">
+            
+            
+        </CommandBinding>
+    </Window.CommandBindings>
+</Window>
